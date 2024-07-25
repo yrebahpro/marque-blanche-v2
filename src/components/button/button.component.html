@@ -1,0 +1,10 @@
+<button 
+    type="button"
+    (click)="onClick.emit($event)"
+    class="btn d-flex align-items-center justify-content-center w-100" 
+    [class]="classNames" 
+    [disabled]="disabled"
+>
+    <img *ngIf="icon" class="me-2" [src]="icon" alt="">
+    <p *ngIf="label" class="m-0" [innerHTML]="label"></p>
+</button>

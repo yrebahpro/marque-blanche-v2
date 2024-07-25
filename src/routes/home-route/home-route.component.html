@@ -1,0 +1,55 @@
+<main style="padding: 3rem 10%; background: rgb(197, 198, 206);">
+
+    <h2 style="text-align: center; background: dodgerblue; color: white; padding: 0.5rem;">Header</h2>
+    <app-header></app-header>
+
+    <h2 style="text-align: center; background: dodgerblue; color: white; padding: 0.5rem;">Button</h2>
+
+    <h3>btn-primary</h3>
+    <div style="margin-bottom: 1rem; display: flex; flex-direction: column; gap: 1rem; max-width: 320px;">
+        <app-button label="btn-primary btn-xxsmall" classNames="btn-primary btn-xxsmall active" onclick="console.log('hello')"></app-button>
+        <app-button label="btn-primary btn-xsmall" classNames="btn-primary btn-xsmall" icon="../../../demo-white.svg"></app-button>
+        <app-button label="btn-primary btn-small" classNames="btn-primary btn-small"></app-button>
+        <app-button label="btn-primary btn-medium" classNames="btn-primary btn-medium"></app-button>
+        <app-button label="btn-primary btn-large" classNames="btn-primary btn-large"></app-button>
+    </div>
+
+    <h3>btn-secondary</h3>
+    <div style="margin-bottom: 1rem; display: flex; flex-direction: column; gap: 1rem; max-width: 320px;">
+        <app-button label="btn-secondary btn-xxsmall" classNames="btn-secondary btn-xxsmall active" icon="../../../demo-white.svg"></app-button>
+        <app-button label="btn-secondary btn-xsmall" classNames="btn-secondary btn-xsmall"></app-button>
+        <app-button label="btn-secondary btn-small" classNames="btn-secondary btn-small"></app-button>
+        <app-button label="btn-secondary btn-medium" classNames="btn-secondary btn-medium"></app-button>
+        <app-button label="btn-secondary btn-large" classNames="btn-secondary btn-large"></app-button>
+    </div>
+
+    <h3>btn-tertiary</h3>
+    <div style="margin-bottom: 1rem; display: flex; flex-direction: column; gap: 1rem; max-width: 320px;">
+        <app-button label="btn-tertiary btn-xxsmall" classNames="btn-tertiary btn-xxsmall active" icon="../../../demo-black.svg"></app-button>
+        <app-button label="btn-tertiary btn-xsmall" classNames="btn-tertiary btn-xsmall"></app-button>
+        <app-button label="btn-tertiary btn-small" classNames="btn-tertiary btn-small"></app-button>
+        <app-button label="btn-tertiary btn-medium" classNames="btn-tertiary btn-medium"></app-button>
+        <app-button label="btn-tertiary btn-large" classNames="btn-tertiary btn-large"></app-button>
+    </div>
+
+    <h3>btn-quaternary</h3>
+    <div style="margin-bottom: 1rem; display: flex; flex-direction: column; gap: 1rem; max-width: 320px;">
+        <app-button label="btn-quaternary btn-xxsmall" classNames="btn-quaternary btn-xxsmall active" icon="../../../demo-black.svg"></app-button>
+        <app-button label="btn-quaternary btn-xsmall" classNames="btn-quaternary btn-xsmall"></app-button>
+        <app-button label="btn-quaternary btn-small" classNames="btn-quaternary btn-small"></app-button>
+        <app-button label="btn-quaternary btn-medium" classNames="btn-quaternary btn-medium"></app-button>
+        <app-button label="btn-quaternary btn-large" classNames="btn-quaternary btn-large"></app-button>
+    </div>
+
+    <h3>btn:disabled</h3>
+    <div style="margin-bottom: 1rem; display: flex; flex-direction: column; gap: 1rem; max-width: 320px;">
+        <app-button label="btn-primary btn-xxsmall disabled" classNames="btn-primary btn-xxsmall" onclick="console.log('hello')" [disabled]="true"></app-button>
+        <app-button label="btn-tertiary btn-xxsmall disabled" classNames="btn-tertiary btn-xxsmall" icon="../../../demo-black.svg" [disabled]="true"></app-button>
+        <app-button label="btn-secondary btn-xxsmall disabled" classNames="btn-secondary btn-xxsmall" icon="../../../demo-white.svg" [disabled]="true"></app-button>
+        <app-button label="btn-quaternary btn-xxsmall disabled" classNames="btn-quaternary btn-xxsmall" icon="../../../demo-black.svg" [disabled]="true"></app-button>
+    </div>
+
+    <h2 style="text-align: center; background: dodgerblue; color: white; padding: 0.5rem;">Footer</h2>
+    <app-footer></app-footer>
+
+</main>

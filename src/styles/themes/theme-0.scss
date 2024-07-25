@@ -1,0 +1,196 @@
+// Buttons ===================================================================
+
+$btn-border-radius: 20px 0;
+$btn-padding-x: 0;
+$btn-padding-y: 24px;
+
+.btn {
+  cursor: pointer;
+  
+  &>* {
+    pointer-events: none;
+  }
+}
+
+// theme colors
+$btn-theme-colors: (
+  "primary-bg": #00566F,
+  "primary-text": #fff,
+  "primary-active": #28778e,
+  "primary-hover": #28778e,
+  "secondary-bg": #D14905,
+  "secondary-text": #fff,
+  "secondary-active": #B94C15,
+  "secondary-hover": #B94C15,
+  "tertiary-bg": #fff,
+  "tertiary-text": #000,
+  "tertiary-text-hover": #00A4B7,
+  "tertiary-text-active": #00A4B7,
+  "tertiary-border-hover": #00A4B7,
+  "tertiary-border": #000,
+  "tertiary-border-active": #00A4B7,
+  "tertiary-active": #F8F9FA,
+  "tertiary-hover": #F8F9FA,
+  "quaternary-bg": #fff,
+  "quaternary-text": #000,
+  "quaternary-text-hover": #00566F,
+  "quaternary-text-active": #00566F,
+  "quaternary-active": #F8F9FA,
+  "quaternary-hover": #F8F9FA,
+  "disabled-bg": #e9ecef,
+  "disabled-text": #696969,
+);
+
+// primary
+$btn-primary-bg: map-get($btn-theme-colors, "primary-bg") !important;
+$btn-primary-text: map-get($btn-theme-colors, "primary-text") !important;
+$btn-primary-hover-bg: map-get($btn-theme-colors, "primary-hover") !important;
+$btn-primary-active-bg: map-get($btn-theme-colors, "primary-active") !important;
+$btn-primary-border: map-get($btn-theme-colors, "primary-bg") !important;
+$btn-primary-hover-border: map-get($btn-theme-colors, "primary-hover") !important;
+$btn-primary-active-border: map-get($btn-theme-colors, "primary-active") !important;
+
+.btn-primary {  
+  background: $btn-primary-bg;
+  color: $btn-primary-text;
+  border-color: $btn-primary-border;
+
+  &:hover {
+    background-color: $btn-primary-hover-bg;
+    border-color: $btn-primary-hover-border;
+  }
+  
+  &:active,
+  &.active {
+    background-color: $btn-primary-active-bg;
+    border-color: $btn-primary-active-border;
+  }
+}
+
+// secondary
+$btn-secondary-bg: map-get($btn-theme-colors, "secondary-bg") !important;
+$btn-secondary-text: map-get($btn-theme-colors, "secondary-text") !important;
+$btn-secondary-hover-bg: map-get($btn-theme-colors, "secondary-hover") !important;
+$btn-secondary-active-bg: map-get($btn-theme-colors, "secondary-active") !important;
+$btn-secondary-border: map-get($btn-theme-colors, "secondary-bg") !important;
+$btn-secondary-hover-border: map-get($btn-theme-colors, "secondary-hover") !important;
+$btn-secondary-active-border: map-get($btn-theme-colors, "secondary-active") !important;
+
+.btn-secondary {
+  background: $btn-secondary-bg;
+  color: $btn-secondary-text;
+  border-color: $btn-secondary-border;
+
+  &:hover {
+    background-color: $btn-secondary-hover-bg;
+    border-color: $btn-secondary-hover-border;
+  }
+
+  &:active,
+  &.active {
+    background-color: $btn-secondary-active-bg;
+    border-color: $btn-secondary-active-border;
+  }
+}
+
+// tertiary
+$btn-tertiary-bg: map-get($btn-theme-colors, "tertiary-bg") !important;
+$btn-tertiary-text: map-get($btn-theme-colors, "tertiary-text") !important;
+$btn-tertiary-hover-bg: map-get($btn-theme-colors, "tertiary-hover") !important;
+$btn-tertiary-active-bg: map-get($btn-theme-colors, "tertiary-active") !important;
+$btn-tertiary-border: map-get($btn-theme-colors, "tertiary-border") !important;
+$btn-tertiary-hover-border: map-get($btn-theme-colors, "tertiary-border-hover") !important;
+$btn-tertiary-active-border: map-get($btn-theme-colors, "tertiary-border-active") !important;
+$btn-tertiary-hover-text: map-get($btn-theme-colors, "tertiary-text-hover") !important;
+$btn-tertiary-active-text: map-get($btn-theme-colors, "tertiary-text-active") !important;
+
+.btn-tertiary {
+  background: $btn-tertiary-bg;
+  color: $btn-tertiary-text;
+  border-color: $btn-tertiary-border;
+
+  &:hover {
+    color: $btn-tertiary-hover-text;
+    background-color: $btn-tertiary-hover-bg;
+    border-color: $btn-tertiary-hover-border;
+  }
+
+  &:active,
+  &.active {
+    color: $btn-tertiary-active-text;
+    background-color: $btn-tertiary-active-bg;
+    border-color: $btn-tertiary-active-border;
+  }
+}
+
+// quaternary
+$btn-quaternary-bg: map-get($btn-theme-colors, "quaternary-bg") !important;
+$btn-quaternary-text: map-get($btn-theme-colors, "quaternary-text") !important;
+$btn-quaternary-hover-bg: map-get($btn-theme-colors, "quaternary-hover") !important;
+$btn-quaternary-active-bg: map-get($btn-theme-colors, "quaternary-active") !important;
+$btn-quaternary-border: transparent !important;
+$btn-quaternary-hover-border: transparent !important;
+$btn-quaternary-active-border: transparent !important;
+$btn-quaternary-hover-text: map-get($btn-theme-colors, "quaternary-text-hover") !important;
+$btn-quaternary-active-text: map-get($btn-theme-colors, "quaternary-text-active") !important;
+
+.btn-quaternary {
+  background: $btn-quaternary-bg;
+  color: $btn-quaternary-text;
+
+  &:hover {
+    color: $btn-quaternary-hover-text;
+    background-color: $btn-quaternary-hover-bg;
+    border-color: $btn-quaternary-hover-border;
+  }
+
+  &:active,
+  &.active {
+    color: $btn-quaternary-active-text;
+    background-color: $btn-quaternary-active-bg;
+    border-color: $btn-quaternary-active-border;
+  }
+}
+
+// disabled
+$btn-disabled-opacity: 0.65;
+$btn-disabled-bg: map-get($btn-theme-colors, "disabled-bg") !important;
+$btn-disabled-text: map-get($btn-theme-colors, "disabled-text") !important;
+
+.btn {
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    color: $btn-disabled-text;
+    background: $btn-disabled-bg;
+    border: $btn-disabled-bg;
+  }
+}
+
+// sizing
+.btn-xxsmall {
+  font-size: 12px !important;
+  height: 18px !important;
+}
+
+.btn-xsmall {
+  font-size: 12px !important;
+  height: 40px !important;
+}
+
+.btn-small {
+  font-size: 16px !important;
+  height: 40px !important;
+  line-height: 26px !important;
+}
+
+.btn-medium {
+  font-size: 18px !important;
+  height: 50px !important;
+}
+
+.btn-large {
+  font-size: 18px !important;
+  height: 60px !important;
+}
+
+// FIN Buttons ================================================================================
