@@ -1,5 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 @Injectable({
@@ -7,18 +8,19 @@ import { filter } from 'rxjs/operators';
 })
 
 export class ThemeService {
-  public currentTheme: string = 'theme-0';
+  private currentThemeSubject = new BehaviorSubject<string>('theme-0');
+  public currentTheme$ = this.currentThemeSubject.asObservable();
   public currentUrl: string = '';
   public router = inject(Router);
 
   constructor() {}
 
   get theme(): string {
-    return this.currentTheme;
+    return this.currentThemeSubject.value;
   }
 
   set theme(value: string) {
-    this.currentTheme = value;
+    this.currentThemeSubject.next(value);
   }
 
   init(): void {
@@ -51,5 +53,4 @@ export class ThemeService {
       this.theme = 'theme-3';
     }
   }
-  
 }
