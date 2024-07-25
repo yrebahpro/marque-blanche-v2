@@ -193,3 +193,6 @@ $btn-disabled-text: map-get($btn-theme-colors, "disabled-text") !important;
 }
 
 // FIN Buttons ================================================================================
+
+// must be import at the end
+@import '../../../node_modules/bootstrap/scss/bootstrap';

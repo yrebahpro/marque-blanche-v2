@@ -32,6 +32,7 @@
               }
             ],
             "styles": [
+              "node_modules/bootstrap/scss/bootstrap.scss",
               "src/styles/styles.scss"
             ],
             "scripts": [],
@@ -96,7 +97,8 @@
               }
             ],
             "styles": [
-              "src/styles/styles.scss"
+              "src/styles/styles.scss",
+              "src/styles/themes/theme-0.scss"
             ],
             "scripts": []
           }
