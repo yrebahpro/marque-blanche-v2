@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
 })
 
 export class HeaderComponent {
-  theme: string | null = 'theme-0';
+  @Input() classNames: string = 'header-primary';
 }

@@ -1,4 +1,6 @@
-// Buttons ===================================================================
+// ============================================================================================
+// BUTTONS ====================================================================================
+// ============================================================================================
 
 $btn-border-radius: 20px 0;
 $btn-padding-x: 0;
@@ -191,7 +193,35 @@ $btn-disabled-text: map-get($btn-theme-colors, "disabled-text") !important;
   height: 60px !important;
 }
 
-// FIN Buttons ================================================================================
+// ============================================================================================
+// HEADER =====================================================================================
+// ============================================================================================
+
+// header theme colors
+$header-theme-colors: (
+  "primary-bg": green,
+  "primary-text": #fff
+);
+
+.header-primary {
+  background: map-get($header-theme-colors, "primary-bg");
+  color: map-get($header-theme-colors, "primary-text");
+}
+
+// ============================================================================================
+// FOOTER =====================================================================================
+// ============================================================================================
+
+// footer theme colors
+$footer-theme-colors: (
+  "primary-bg": black,
+  "primary-text": yellow
+);
+
+.footer-primary {
+  background: map-get($footer-theme-colors, "primary-bg");
+  color: map-get($footer-theme-colors, "primary-text");
+}
 
 // must be import at the end
 @import '../../../node_modules/bootstrap/scss/bootstrap';

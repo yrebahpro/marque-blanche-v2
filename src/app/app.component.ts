@@ -21,13 +21,18 @@ export class AppComponent implements OnInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit(): void {
+    this.initTheming();
+  }
+
+  // init theme service and set data-attr to html tag (to define theme to apply by client url)
+  initTheming(): void {
     this.themeService.init();
-    setTimeout(()=>{
+    let timeout = setTimeout(()=>{
       if (isPlatformBrowser(this.platformId)) {
         const htmlElement = document.documentElement;
         htmlElement.setAttribute('data-theme', this.themeService.theme);
-        console.log(this.themeService.theme)
       }
-    }, 0)
+    clearTimeout(timeout);
+    }, 300);
   }
 }
